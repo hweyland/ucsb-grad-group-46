@@ -1,0 +1,18 @@
+---
+title: "ucsb-grad-group-46"
+author: "Aaron K/Hanna Weyland"
+date: "11/25/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(here)
+```
+Here I will read in the data
+
+```{r}
+ucsb_grad <- read_csv(here("data", "ucsb_grad_data.csv"))
+```
+
