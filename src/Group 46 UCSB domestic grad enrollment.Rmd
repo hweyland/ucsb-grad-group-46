@@ -15,10 +15,12 @@ Here I will read in the data
 ```{r}
 ucsb_grad <- read_csv(here("data", "ucsb_grad_data.csv"))
 ```
+
 ggplot displaying year versus domestic UCSB college enrollment (ggplot(data = ucsb_grad)) with ethnicity filling col by color (geom_col(aes(fill = ethnicity)))
 
 ```{r}
 ggplot(data = ucsb_grad, aes(x = year_abbr, y = domestic_enrollment)) +
-  geom_col(aes(fill = ethnicity)) 
+  geom_col(aes(fill = ethnicity), position = "fill") +
+  labs(x = "Year", y = "Domestic Graduate Enrollment")
 
 ```
